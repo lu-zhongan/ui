@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<script>
+	    var HEADLINE ='提示';
+		var TEXT ='正文';
+		var BUTTON1 ='1';
+		var BUTTON1 ='1';
+		
+		function popupsettings(){
+			//document.getElementById("p1").innerHTML = TEXT;
+			document.getElementById("Headline").innerHTML = HEADLINE;
+			document.getElementById("Text").innerHTML = TEXT;
+			document.getElementById("Button1").innerHTML = BUTTON1;
+			document.getElementById("Button2").innerHTML = BUTTON1;
+		}
+		
+		function show(){
+		  document.getElementById("Ground").style.display="block";
+		}
+		function conceal(){
+		    document.getElementById("Ground").style.display="none";
+		}
+	</script>
+	<style>
+		.ground{
+			display: none;
+			
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			width: 400px;
+			height: 250px;
+			border-radius: 20px;
+			border: 2px solid #fff;
+			background: #fff;
+			margin: auto;
+			position: absolute;
+			top: -200px;
+			left: 0;
+			right: 0;
+			bottom: 0;
+		}
+		.ground1{
+			position: relative;
+		}
+		.headline{
+			margin: auto;
+			position: absolute;
+			top: 10px;
+			left: 175px;
+			right: 0;
+			bottom: 0;
+		}
+		.text{
+			margin: auto;
+			position: absolute;
+			top: 110px;
+			left: 50px;
+			right: 0;
+			bottom: 0;
+		}
+		.yes,.no{
+			border: 2px solid #87cefa;
+			background: #87cefa;
+			border-radius: 11px;
+			width: 65px;
+			height: 38px;
+			font-size: 17px;
+		}
+		.yes{
+			margin: auto;
+			position: absolute;
+			top: 420px;
+			left: 140px;
+			right: 0;
+			bottom: 0;
+		}
+		.no{
+			margin: auto;
+			position: absolute;
+			top: 420px;
+			left: 290px;
+			right: 0;
+			bottom: 0;
+		}
+		button:hover{
+			
+				border: 2px solid #ffdd55;
+				}
+	</style>
+	<body>
+		<div class="ground" id="Ground">
+			<div class="ground1">
+				<div class="headline"><h2 id="Headline"></h2></div>
+				<div class="text"><p id="Text"></p></div>
+				<div class="button1"><button class="yes" onclick="conceal()" id="Button1">确定</button><button class="no" onclick="conceal()" id="Button2">取消</button></div>
+			</div>
+		</div>
+	</body>
+	<button onclick="show(),popupsettings()">显示</button>
+	<!--button onclick="popupsettings()">显示1</button-->
+</html>
